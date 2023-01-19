@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 html {
-    @apply text-white font-mono;
+    @apply text-white font-mono bg-gray-900;
 }
