@@ -5,6 +5,7 @@ import { default as CountryModel } from "../../models/Country";
 import Error from "../utilities/Error";
 import Loading from "../utilities/Loading";
 import { SiWikipedia } from "react-icons/si";
+import WeatherWidget from "../utilities/WeatherWidget";
 
 export default function Country() {
     const { countryCode } = useParams();
@@ -35,6 +36,7 @@ export default function Country() {
                             <h3>
                                 Capital: <span className="text-primary-300">{countryQuery.data.capital}</span>
                             </h3>
+                            <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} />
                         </div>
                         <div>
                             <h3>
