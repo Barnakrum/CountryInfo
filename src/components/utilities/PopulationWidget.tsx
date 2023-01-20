@@ -21,7 +21,8 @@ export default function PopulationWidget(props: { countryCode: string }) {
         return <Loading />;
     }
     if (populationQuery.isError) {
-        return <Error error={populationQuery.error} />;
+        // <Error error={populationQuery.error} />
+        return <>Missing definition in United Nations</>;
     }
 
     return (
