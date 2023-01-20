@@ -1,0 +1,34 @@
+export default interface CountryPopulation {
+    locationId: number;
+    location: string;
+    iso3: string;
+    iso2: string;
+    locationTypeId: number;
+    indicatorId: number;
+    indicator: string;
+    indicatorDisplayName: string;
+    sourceId: number;
+    source: string;
+    revision: number;
+    variantId: number;
+    variant: string;
+    variantShortName: string;
+    variantLabel: string;
+    timeId: number;
+    timeLabel: string;
+    timeMid: string;
+    categoryId: number;
+    category: string;
+    estimateTypeId: number;
+    estimateType: string;
+    estimateMethodId: number;
+    estimateMethod: string;
+    sexId: number;
+    sex: string;
+    ageId: number;
+    ageLabel: string;
+    ageStart: number;
+    ageEnd: number;
+    ageMid: number;
+    value: number;
+}
