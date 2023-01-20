@@ -6,9 +6,9 @@ const useAllCountries = () =>
     useQuery({
         queryKey: ["allCountries"],
         queryFn: async (): Promise<CountryModel[]> => {
-            return await (
-                await axios.get(import.meta.env.VITE_COUNTRY_API + "/all")
-            ).data;
+            let data = await (await axios.get(import.meta.env.VITE_COUNTRY_API + "/all")).data;
+            data.sort((a: CountryModel, b: CountryModel) => a.name.common.localeCompare(b.name.common));
+            return data;
         },
     });
 
