@@ -3,5 +3,20 @@
 @tailwind utilities;
 
 html {
-    @apply text-white font-mono bg-gray-900;
+    @apply text-white font-mono bg-neutral-900;
+}
+h1 {
+    @apply text-6xl;
+}
+h2 {
+    @apply text-3xl;
+}
+h3 {
+    @apply text-2xl;
+}
+h4 {
+    @apply text-xl;
+}
+.icon {
+    @apply text-black hover:text-primary-400 bg-white p-1 rounded-lg;
 }
