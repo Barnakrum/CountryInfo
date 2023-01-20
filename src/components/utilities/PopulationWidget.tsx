@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import CountryInfo from "../../models/UnitedNations/CountryInfo";
 import CountryPopulation from "../../models/UnitedNations/CountryPopulation";
 import Error from "./Error";
+import LineGraph from "./LineGraph";
 import Loading from "./Loading";
 
 export default function PopulationWidget(props: { countryCode: string }) {
@@ -22,16 +23,10 @@ export default function PopulationWidget(props: { countryCode: string }) {
     if (populationQuery.isError) {
         return <Error error={populationQuery.error} />;
     }
+
     return (
         <>
-            {populationQuery.data.map((year) => {
-                return (
-                    <>
-                        {year.value}
-                        <br />
-                    </>
-                );
-            })}
+            <LineGraph countryPopulationData={populationQuery.data} />
         </>
     );
 }
