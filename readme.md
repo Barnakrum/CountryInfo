@@ -12,3 +12,5 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] Add menu
 -   [x] Add search bar
 -   [ ] Add search funcionality
+-   [ ] Change a tags to proper useNavigate links
+-   [ ] Fix performence and styling of Country list page
