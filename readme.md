@@ -9,5 +9,5 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 
 -   [x] Add graphs for population data
 -   [x] Fix layout
--   [ ] Add menu
--   [ ] Add search bar
+-   [x] Add menu
+-   [x] Add search bar
