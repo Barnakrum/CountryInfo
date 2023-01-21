@@ -8,6 +8,6 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 ## To-Do
 
 -   [x] Add graphs for population data
--   [ ] Fix layout
+-   [x] Fix layout
 -   [ ] Add menu
 -   [ ] Add search bar

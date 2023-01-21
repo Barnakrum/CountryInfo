@@ -38,16 +38,16 @@ export default function Country() {
                                 Capital: <span className="text-primary-300">{countryQuery.data.capital}</span>
                             </h3>
                             <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} />
-                            <PopulationWidget countryCode={countryCode || "usa"} />
                         </div>
                         <div>
                             <h3>
                                 Population:<span className="text-primary-300"> {countryQuery.data.population}</span>
                             </h3>
+                            <PopulationWidget countryCode={countryCode || "usa"} />
                         </div>
                     </div>
                 </div>
-                <div className="grid gird-cols-1 divide-y-2 divide-primary-400 gap-4 md:gap-2 md:min-w-fit md:w-1/5 border-2 p-4 rounded-md border-primary-400">
+                <div className="grid gird-cols-1 divide-y-2 divide-primary-400 gap-4 md:gap-2 md:min-w-fit h-min md:w-1/5 border-2 p-4 rounded-md border-primary-400">
                     <div className="text-center flex flex-col items-center">
                         <h4>Flag:</h4>
                         <img className="h-40" src={countryQuery.data.flags.svg} alt={countryQuery.data.name.common + " flag"} />
