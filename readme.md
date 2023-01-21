@@ -11,3 +11,4 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] Fix layout
 -   [x] Add menu
 -   [x] Add search bar
+-   [ ] Add search funcionality
