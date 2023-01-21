@@ -7,6 +7,8 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 
 ## To-Do
 
+### General
+
 -   [x] Add graphs for population data
 -   [x] Fix layout
 -   [x] Add menu
@@ -14,3 +16,14 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [ ] Add search funcionality
 -   [ ] Change a tags to proper useNavigate links
 -   [ ] Fix performence and styling of Country list page
+
+### Add more data for country display
+
+-   [ ] Local time
+-   [ ] currency
+-   [ ] official
+-   [ ] language
+-   [ ] area
+-   [ ] region
+-   [ ] landlock
+-   [ ] neighbours
