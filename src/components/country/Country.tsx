@@ -17,6 +17,7 @@ export default function Country() {
             return data[0];
         },
     });
+    const numberFormater = new Intl.NumberFormat("en-us");
 
     if (countryQuery.isLoading || countryQuery.isIdle) {
         return <Loading />;
@@ -55,6 +56,23 @@ export default function Country() {
                     </div>
                 </div>
                 <div className="grid gird-cols-1 divide-y-2 divide-primary-400 gap-4 md:gap-2 md:min-w-fit h-min md:w-1/5 border-2 p-4 rounded-md border-primary-400">
+                    <div>
+                        <h4>
+                            <div>
+                                Region: <span className="text-primary-400">{countryQuery.data.region}</span>
+                            </div>
+                            <div>
+                                Has sea access: <span className="text-primary-400">{countryQuery.data.landlocked ? <>No</> : <>Yes</>}</span>
+                            </div>
+                            <div>
+                                Area:{" "}
+                                <span className="text-primary-400">
+                                    {numberFormater.format(countryQuery.data.area)}
+                                    <span className="text-white"> km^2</span>
+                                </span>
+                            </div>
+                        </h4>
+                    </div>
                     <div className="text-center flex flex-col items-center">
                         <h4>Flag:</h4>
                         <img className="h-40" src={countryQuery.data.flags.svg} alt={countryQuery.data.name.common + " flag"} />

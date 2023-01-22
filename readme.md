@@ -19,10 +19,10 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 
 ### Add more data for country display
 
--   [ ] Local time
+-   [x] Local time
 -   [ ] currency
 -   [ ] official language
--   [ ] area
--   [ ] region
--   [ ] landlock
+-   [x] area
+-   [x] region
+-   [x] landlock
 -   [ ] neighbours
