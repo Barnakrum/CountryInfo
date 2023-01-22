@@ -21,8 +21,7 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 
 -   [ ] Local time
 -   [ ] currency
--   [ ] official
--   [ ] language
+-   [ ] official language
 -   [ ] area
 -   [ ] region
 -   [ ] landlock
