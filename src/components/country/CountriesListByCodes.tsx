@@ -8,7 +8,10 @@ import { BiLinkExternal } from "react-icons/bi";
 export default function CountriesListByCodes(props: { codes: string[] }) {
     const byCodeCountries = useQuery({
         queryKey: ["country", "code", props.codes],
-        queryFn: async (): Promise<CountryModel[]> => {
+        queryFn: async (): Promise<CountryModel[] | null> => {
+            if (props.codes === undefined) {
+                return null;
+            }
             const apiResponse = await axios.get(import.meta.env.VITE_COUNTRY_API + "/alpha?codes=" + props.codes.join(","));
             //const apiResponse = await axios.get("https://restcountries.com/v3.1/alpha?codes=can,mex");
 
@@ -16,12 +19,17 @@ export default function CountriesListByCodes(props: { codes: string[] }) {
             return data;
         },
     });
+
     if (byCodeCountries.isLoading || byCodeCountries.isIdle) {
         return <Loading />;
     }
     if (byCodeCountries.isError) {
         return <Error error={byCodeCountries.error} />;
     }
+    if (byCodeCountries.data === null) {
+        return <h4 className="px-4">None</h4>;
+    }
+
     return (
         <div className="px-4">
             {byCodeCountries.data.map((country) => {
