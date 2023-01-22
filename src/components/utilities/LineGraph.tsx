@@ -20,7 +20,7 @@ export default function LineGraph(props: { countryPopulationData: CountryPopulat
 
     return (
         <>
-            <div className="chart-container w-96 h-96 relative">
+            <div className="chart-container w-96 h-48 relative">
                 <Line options={options} data={{ labels: labels, datasets: [{ label: "Population", data: props.countryPopulationData.map((year) => year.value), backgroundColor: "#0d9488", borderColor: "#5eead4" }] }} />
             </div>
         </>
