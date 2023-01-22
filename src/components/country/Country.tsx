@@ -34,10 +34,12 @@ export default function Country() {
                     </div>
                     <div className="grid gird-cols-1 md:grid-cols-2">
                         <div>
-                            <h3>
-                                Capital: <span className="text-primary-300">{countryQuery.data.capital}</span>
-                            </h3>
-                            <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} />
+                            <div>
+                                <h3>
+                                    Capital: <span className="text-primary-300">{countryQuery.data.capital}</span>
+                                </h3>
+                                <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} />
+                            </div>
                         </div>
                         <div className="flex flex-col gap-y-8">
                             <div>
