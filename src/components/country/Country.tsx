@@ -7,6 +7,7 @@ import Loading from "../utilities/Loading";
 import { SiWikipedia } from "react-icons/si";
 import WeatherWidget from "../utilities/WeatherWidget";
 import PopulationWidget from "../utilities/PopulationWidget";
+import CountriesListByCodes from "./CountriesListByCodes";
 
 export default function Country() {
     const { countryCode } = useParams();
@@ -80,6 +81,10 @@ export default function Country() {
                     <div className="text-center flex flex-col items-center">
                         <h4>Coat of arms:</h4>
                         <img className="h-40" src={countryQuery.data.coatOfArms.svg} alt={countryQuery.data.name.common + " coat of arms"} />
+                    </div>
+                    <div>
+                        <h3>Neighbours:</h3>
+                        <CountriesListByCodes codes={countryQuery.data.borders} />
                     </div>
                 </div>
             </div>

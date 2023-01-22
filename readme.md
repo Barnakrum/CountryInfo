@@ -25,4 +25,4 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] area
 -   [x] region
 -   [x] landlock
--   [ ] neighbours
+-   [x] neighbours
