@@ -4,6 +4,7 @@ import { default as CountryModel } from "../../models/Country";
 import Error from "../utilities/Error";
 import Loading from "../utilities/Loading";
 import { BiLinkExternal } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function CountriesListByCodes(props: { codes: string[] }) {
     const byCodeCountries = useQuery({
@@ -35,7 +36,7 @@ export default function CountriesListByCodes(props: { codes: string[] }) {
             {byCodeCountries.data.map((country) => {
                 return (
                     <div>
-                        <a className="flex gap-1" target="_blank" href={"/country/" + country.cca3}>
+                        <Link className="flex gap-1" target="_blank" to={"/country/" + country.cca3}>
                             <span className="flex justify-center items-center">
                                 <img className="w-6" src={country.flags.svg} />
                             </span>
@@ -45,7 +46,7 @@ export default function CountriesListByCodes(props: { codes: string[] }) {
                                     <BiLinkExternal />
                                 </span>
                             </h4>
-                        </a>
+                        </Link>
                     </div>
                 );
             })}

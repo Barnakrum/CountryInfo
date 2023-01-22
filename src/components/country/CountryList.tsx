@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAllCountries from "../../hooks/allCountries";
 import Error from "../utilities/Error";
 import Loading from "../utilities/Loading";
@@ -18,7 +19,7 @@ export default function CountryList() {
                     <div className="flex items-center justify-between text-center text-3xl gap-4">
                         <img className="h-6" src={country.flags.svg} />
                         <div className="text-primary-400">
-                            <a href={"/country/" + country.cca3.toLowerCase()}>{country.name.common}</a>
+                            <Link to={"/country/" + country.cca3.toLowerCase()}>{country.name.common}</Link>
                         </div>
                         <img className="h-8" src={country.coatOfArms.svg} />
                     </div>

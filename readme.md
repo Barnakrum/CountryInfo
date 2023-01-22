@@ -14,7 +14,7 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] Add menu
 -   [x] Add search bar
 -   [ ] Add search funcionality
--   [ ] Change a tags to proper useNavigate links
+-   [x] Change a tags to proper useNavigate(\*<Link></Link> component) links
 -   [ ] Fix performence and styling of Country list page
 
 ### Add more data for country display
