@@ -39,11 +39,16 @@ export default function Country() {
                             </h3>
                             <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} />
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-y-8">
+                            <div>
+                                <h3>
+                                    Population:<span className="text-primary-300"> {countryQuery.data.population}</span>
+                                </h3>
+                                <PopulationWidget countryCode={countryCode || "usa"} />
+                            </div>
                             <h3>
-                                Population:<span className="text-primary-300"> {countryQuery.data.population}</span>
+                                Member of United Nations:<span className="text-primary-400"> {countryQuery.data.unMember ? <>Yes</> : <>No</>}</span>
                             </h3>
-                            <PopulationWidget countryCode={countryCode || "usa"} />
                         </div>
                     </div>
                 </div>
@@ -61,9 +66,6 @@ export default function Country() {
             {/* <a className="icon text-3xl w-min h-min" href={"https://en.wikipedia.org/w/index.php?search=" + countryQuery.data.name.common}>
                         <SiWikipedia />
                     </a> */}
-            {/* <h3>
-                            Member of United Nations:<span className="text-primary-400"> {countryQuery.data.unMember ? <>Yes</> : <>No</>}</span>
-                        </h3> */}
         </div>
     );
 }
