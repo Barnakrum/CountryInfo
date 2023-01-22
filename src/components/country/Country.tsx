@@ -74,17 +74,19 @@ export default function Country() {
                             </div>
                         </h4>
                     </div>
-                    <div className="text-center flex flex-col items-center">
+                    <div className="country-grid-data">
                         <h4>Flag:</h4>
                         <img className="h-40" src={countryQuery.data.flags.svg} alt={countryQuery.data.name.common + " flag"} />
                     </div>
-                    <div className="text-center flex flex-col items-center">
+                    <div className="country-grid-data">
                         <h4>Coat of arms:</h4>
                         <img className="h-40" src={countryQuery.data.coatOfArms.svg} alt={countryQuery.data.name.common + " coat of arms"} />
                     </div>
-                    <div>
+                    <div className="country-grid-data">
                         <h3>Neighbours:</h3>
-                        <CountriesListByCodes codes={countryQuery.data.borders} />
+                        <div className="">
+                            <CountriesListByCodes codes={countryQuery.data.borders} />
+                        </div>
                     </div>
                 </div>
             </div>

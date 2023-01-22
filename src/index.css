@@ -20,3 +20,7 @@ h4 {
 .icon {
     @apply text-black hover:text-primary-400 bg-white p-1 rounded-lg;
 }
+
+.country-grid-data {
+    @apply text-center flex flex-col items-center;
+}
