@@ -5,6 +5,7 @@ import Loading from "./Loading";
 import Error from "./Error";
 
 export default function WeatherWidget(props: { lat: number; lon: number }) {
+    const time = new Date();
     const weatherQuery = useQuery({
         queryKey: ["weather", props.lat, props.lon],
         queryFn: async (): Promise<WeatherModel> => {
@@ -19,7 +20,10 @@ export default function WeatherWidget(props: { lat: number; lon: number }) {
         return <Error error={weatherQuery.error} />;
     }
     return (
-        <div className="select-none m-0 p-2">
+        <div className="select-none m-0 p-0">
+            <h3 className="mt-4">
+                Local time: <span className="text-primary-400">{time.getUTCHours() + weatherQuery.data.timezone / 3600 + ":" + time.getUTCMinutes()}</span>
+            </h3>
             <div className="flex flex-col p-2 h-40 w-40 m-4 border-2 border-primary-400 rounded-lg ">
                 <div className="">
                     <h4>{weatherQuery.data.main.temp}°C</h4>
