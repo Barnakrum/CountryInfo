@@ -40,7 +40,7 @@ export default function Country() {
                                 <h3>
                                     Capital: <span className="text-primary-300">{countryQuery.data.capital}</span>
                                 </h3>
-                                <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} />
+                                {/* <WeatherWidget lat={countryQuery.data.capitalInfo.latlng[0]} lon={countryQuery.data.capitalInfo.latlng[1]} /> */}
                             </div>
                         </div>
                         <div className="flex flex-col gap-y-8">
@@ -83,7 +83,7 @@ export default function Country() {
                         <img className="h-40" src={countryQuery.data.coatOfArms.svg} alt={countryQuery.data.name.common + " coat of arms"} />
                     </div>
                     <div className="country-grid-data">
-                        <h3>Neighbours:</h3>
+                        <h4>Neighbours:</h4>
                         <div className="">
                             <CountriesListByCodes codes={countryQuery.data.borders} />
                         </div>
