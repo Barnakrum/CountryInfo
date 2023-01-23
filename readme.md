@@ -13,12 +13,13 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] Fix layout
 -   [x] Add menu
 -   [x] Add search bar
--   [ ] Add search funcionality
+-   [x] Add search funcionality
 -   [x] Change a tags to proper useNavigate(\*<Link></Link> component) links
 -   [ ] Fix performence and styling of Country list page
 -   [ ] Fix countries without weather data to display properly
 -   [ ] Move header inside router
 -   [ ] Move data from grid in country display to new reusable component
+-   [ ] Better error handling and loading display
 
 ### Add more data for country display
 
