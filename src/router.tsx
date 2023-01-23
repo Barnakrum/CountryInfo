@@ -7,6 +7,7 @@ const router = createBrowserRouter([
     { path: "/", element: <CountryList /> },
     { path: "/country/:countryCode", element: <Country /> },
     { path: "/search/:searchQuery", element: <Search /> },
+    { path: "/*", element: <CountryList /> },
 ]);
 
 export default router;
