@@ -1,6 +1,6 @@
 import { AiOutlineSearch } from "react-icons/ai";
 
-export default function Search() {
+export default function SearchBar() {
     return (
         <div>
             <div className="flex flex-row text-primary-400 hover:text-primary-400">

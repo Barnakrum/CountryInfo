@@ -1,4 +1,4 @@
-import Search from "../utilities/Search";
+import SearchBar from "../utilities/SearchBar";
 import Menu from "./Menu";
 import Title from "./Title";
 
@@ -7,7 +7,7 @@ export default function Header() {
         <div className="h-20 p-4 flex justify-between items-center border-b-2 border-primary-400">
             <Title />
             <Menu>
-                <Search />
+                <SearchBar />
             </Menu>
         </div>
     );
