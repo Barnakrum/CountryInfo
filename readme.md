@@ -15,11 +15,12 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] Add search bar
 -   [x] Add search funcionality
 -   [x] Change a tags to proper useNavigate(\*<Link></Link> component) links
--   [ ] Fix performence and styling of Country list page
+-   [x] Fix performence and styling of Country list page
 -   [ ] Fix countries without weather data to display properly
 -   [ ] Move header inside router
 -   [ ] Move data from grid in country display to new reusable component
 -   [ ] Better error handling and loading display
+        -------Discontinued
 
 ### Add more data for country display
 
@@ -30,3 +31,4 @@ You can view it [here](https://countryinfo.onrender.com/ "here")
 -   [x] region
 -   [x] landlock
 -   [x] neighbours
+        -------Discontinued
