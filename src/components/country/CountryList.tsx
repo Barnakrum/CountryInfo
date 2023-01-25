@@ -21,7 +21,6 @@ export default function CountryList() {
                         <div className="text-primary-400">
                             <Link to={"/country/" + country.cca3.toLowerCase()}>{country.name.common}</Link>
                         </div>
-                        <img className="h-8" src={country.coatOfArms.svg} />
                     </div>
                 </div>
             ))}
